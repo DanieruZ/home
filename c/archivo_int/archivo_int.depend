@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1727315883 source:e:\mis archivos black\programacion\projects\c\archivo_int\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<windows.h>
+	"archivo_int.h"
+
+1727295589 e:\mis archivos black\programacion\projects\c\archivo_int\archivo_int.h
+
+1727315773 source:e:\mis archivos black\programacion\projects\c\archivo_int\archivo_int.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	<windows.h>
+	"archivo_int.h"
+
