@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1727053388 source:e:\mis archivos black\programacion\projects\c\arbol_int\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdbool.h>
+	<malloc.h>
+	"arbol_int.h"
+
+1727052008 e:\mis archivos black\programacion\projects\c\arbol_int\arbol_int.h
+
+1727053531 source:e:\mis archivos black\programacion\projects\c\arbol_int\arbol_int.c
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdbool.h>
+	<malloc.h>
+	"arbol_int.h"
+
+1491386048 source:e:\mis archivos black\programacion\projects\c\arbol_int\gotoxy.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
