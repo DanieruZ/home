@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1726175109 source:e:\mis archivos black\programacion\c\lista_simple_int\lista_simple_int.c
+	"lista_simple_int.h"
+	<stddef.h>
+	<stdarg.h>
+	<malloc.h>
+	<stdbool.h>
+
+1726166186 e:\mis archivos black\programacion\c\lista_simple_int\lista_simple_int.h
+	<malloc.h>
+	<stdbool.h>
+
+1726174605 source:e:\mis archivos black\programacion\c\lista_simple_int\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista_simple_int.h"
+	<stdbool.h>
+
+1727241536 source:e:\mis archivos black\programacion\projects\c\lista_simple_int\lista_simple_int.c
+	<stddef.h>
+	<stdarg.h>
+	<stdbool.h>
+	<malloc.h>
+	"lista_simple_int.h"
+
+1727241536 e:\mis archivos black\programacion\projects\c\lista_simple_int\lista_simple_int.h
+	<malloc.h>
+	<stdbool.h>
+
+1727240755 source:e:\mis archivos black\programacion\projects\c\lista_simple_int\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"lista_simple_int.h"
+
