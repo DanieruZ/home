@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1727236586 source:e:\mis archivos black\programacion\projects\c\pila_int\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<stdbool.h>
+	<stdarg.h>
+	"pila_int.h"
+
+1727216450 e:\mis archivos black\programacion\projects\c\pila_int\pila_int.h
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+	<stdbool.h>
+
+1727233665 source:e:\mis archivos black\programacion\projects\c\pila_int\pila_int.c
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stdbool.h>
+	"pila_int.h"
+
