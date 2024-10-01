@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1727746415 source:e:\mis archivos black\programacion\home\c\simple_crud_with_files\simple_crud_with_files\person.c
+	"person.h"
+
+1727746649 e:\mis archivos black\programacion\home\c\simple_crud_with_files\simple_crud_with_files\person.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
+1727745171 source:e:\mis archivos black\programacion\home\c\simple_crud_with_files\simple_crud_with_files\main.c
+	"person.h"
+	"personFile.h"
+
+1727743413 e:\mis archivos black\programacion\home\c\simple_crud_with_files\simple_crud_with_files\personfile.h
+	"person.h"
+
+1727743686 source:e:\mis archivos black\programacion\home\c\simple_crud_with_files\simple_crud_with_files\personfile.c
+	"personFile.h"
+
