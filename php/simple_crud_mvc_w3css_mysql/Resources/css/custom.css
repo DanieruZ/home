@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Ensure that the body occupies at least 100% of the window height. */
+}
+
+.content {
+  flex: 1;  /* Allows content to fill the remaining space. */
+}
