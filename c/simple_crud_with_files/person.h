@@ -7,15 +7,15 @@
 #include <stdbool.h>
 
 #define PERSON_FILE "person_file.dat"
-#define PERSON_TMP_FILE "person_tmp_file.dat"
 #define ESC 27
 #define SIZE 50
+#define DNI 10
 
 typedef struct {
   int id;
   char firstname[SIZE];
   char lastname[SIZE];
-  char dni[10];
+  char dni[DNI];
   char email[SIZE];
   bool isActive;
 } Person;

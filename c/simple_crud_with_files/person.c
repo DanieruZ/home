@@ -4,7 +4,7 @@
 Person addPerson() {
   Person person;
   person.id = getLastId() + 1;
-  char dni[SIZE];
+  char dni[DNI];
 
   printf("Firstname: ");
   fflush(stdin);
@@ -52,15 +52,14 @@ void showPerson(Person person) {
     person.lastname,
     person.dni,
     person.email);
-    person.isActive ? printf("   OK   |\n") : printf("   NO   |\n");
+    printf("%s", person.isActive ? "   OK   |" : "   NO   |");
 
-  printf("+-----+--------------+--------------+--------------+----------------------+--------+\n");
+  printf("\n+-----+--------------+--------------+--------------+----------------------+--------+\n");
 }
 
 
 // Update data in a record.
 Person updatePerson(Person person) {
-  Person tmp;
   int updateOption;
   int option;
 
@@ -74,32 +73,28 @@ Person updatePerson(Person person) {
         system("cls");
         printf("\nFirstname: ");
         fflush(stdin);
-        gets(tmp.firstname);
-        strcpy(person.firstname, tmp.firstname);
+        gets(person.firstname);
         break;
 
       case 2:
         system("cls");
         printf("Lastname: ");
         fflush(stdin);
-        gets(tmp.lastname);
-        strcpy(person.lastname, tmp.lastname);
+        gets(person.lastname);
         break;
 
       case 3:
         system("cls");
         printf("DNI: ");
         fflush(stdin);
-        gets(tmp.dni);
-        strcpy(person.dni, tmp.dni);
+        gets(person.dni);
         break;
 
       case 4:
         system("cls");
         printf("Email: ");
         fflush(stdin);
-        gets(tmp.email);
-        strcpy(person.email, tmp.email);
+        gets(person.email);
         break;
 
       case 5:
@@ -110,13 +105,13 @@ Person updatePerson(Person person) {
         printf("Choose an option: ");
         fflush(stdin);
         scanf("%d", &option);
-        person.isActive = (option == 1 ? (option == 2 ? false : true) : false);
+        person.isActive = (option == 1);
         break;
 
       case 0:
         system("cls");
         return person;
-        main();
+        //main();
         break;
 
       default:

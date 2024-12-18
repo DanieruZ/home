@@ -9,7 +9,7 @@ int getLastId() {
   if(file) {
     fseek(file, (-1) * sizeof(Person), SEEK_END);
 
-    if(fread(&person, sizeof(Person), 1, file) > 0) {
+    if(fread(&person, sizeof(Person), 1, file) == 1) {
       lastId = person.id;
     }
   }
@@ -53,7 +53,7 @@ void showPersonFile(int option) {
   if(file) {
     showHeadersTable();
 
-    while(fread(&person, sizeof(Person), 1, file) > 0) {
+    while(fread(&person, sizeof(Person), 1, file) == 1) {
       if(option == 2) {
         showPerson(person);
       }
@@ -91,7 +91,7 @@ bool existPersonDNI(const char* dni) {
   FILE* file = fopen(PERSON_FILE, "rb");
 
   if(file) {
-    while(exist == false && fread(&person, sizeof(Person), 1 , file) > 0) {
+    while(exist == false && fread(&person, sizeof(Person), 1 , file) == 1) {
       if(strcmp(person.dni, dni) == 0) {
         exist = true;
       }
@@ -108,8 +108,9 @@ Person getPersonByDNI(const char* dni) {
   FILE* file = fopen(PERSON_FILE, "rb");
 
   if(file) {
-    while(fread(&person, sizeof(Person), 1 , file) > 0) {
+    while(fread(&person, sizeof(Person), 1 , file) == 1) {
       if(strcmp(person.dni, dni) == 0) {
+        fclose(file);
         return person;
       }
     }
@@ -134,20 +135,31 @@ Person updatePersonToFile(Person person) {
 
 // Deletes a record searched by dni from the file.
 void deletePersonByDNI(const char* dni) {
-  Person person;
-  FILE* file = fopen(PERSON_FILE, "rb");
-  FILE* fileTmp = fopen(PERSON_TMP_FILE, "wb");
+  //Person person;
+  int countRecords = getFileLength();
+  Person* people = malloc(countRecords * sizeof(Person));
 
-  if(file && fileTmp) {
-    while(fread(&person, sizeof(Person), 1 , file) > 0) {
-      if(strcmp(person.dni, dni) != 0) {
-        fwrite(&person, sizeof(Person), 1, fileTmp);
-      }
-    }
+  FILE* file = fopen(PERSON_FILE, "rb");
+
+  if(file) {
+    fread(people, sizeof(Person), countRecords, file);
     fclose(file);
-    fclose(fileTmp);
   }
-  remove(PERSON_FILE);
-  rename(PERSON_TMP_FILE, PERSON_FILE);
+
+  int newCount = 0;
+
+  for(int i = 0; i < countRecords; i++) {
+    if(strcmp(people[i].dni, dni) != 0) {
+      people[newCount++] = people[i];
+    }
+  }
+
+  file = fopen(PERSON_FILE, "wb");
+    if(file) {
+      fwrite(people, sizeof(Person), newCount, file);
+      fclose(file);
+      free(people);
+    }
+  fclose(file);
 }
 

@@ -5,7 +5,7 @@ int main() {
 
   Person person;
   char menuOption;
-  char dni[SIZE];
+  char dni[DNI];
   int totalRecords = 0;
 
   do {
