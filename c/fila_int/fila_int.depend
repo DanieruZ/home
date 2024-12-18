@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1734542233 source:e:\mis archivos black\programacion\projects\c\fila_int\fila_int.c
+	"fila_int.h"
+
+1734542233 e:\mis archivos black\programacion\projects\c\fila_int\fila_int.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+
+1734539253 source:e:\mis archivos black\programacion\projects\c\fila_int\main.c
+	"fila_int.h"
+
